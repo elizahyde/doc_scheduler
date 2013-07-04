@@ -1,0 +1,14 @@
+<h1>Patients#index</h1>
+<p>Find me in app/views/patients/index.html.erb</p>
+
+<% @patients.each do |patient| %>
+  <p>
+    <%= link_to(patient.name, patient_url(patient.id)) %>
+    <%= link_to("Edit", edit_patient_url(patient.id)) %> -
+    <%= link_to("Delete", patient_url(patient.id), :method => :delete) %>
+  </p>
+<% end %>
+
+<p>
+<%= link_to "New Patient", new_patient_url %>
+</p>

@@ -1,0 +1,9 @@
+<h1>Doctors#new</h1>
+<p>Find me in app/views/doctors/new.html.erb</p>
+
+<%= form_for @doctor do |f| %>
+<label>Name</label>
+<%= f.text_field :name %>
+<br>
+<%= f.submit %>
+<% end %>

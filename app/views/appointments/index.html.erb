@@ -1,0 +1,14 @@
+<h1>Appointments#index</h1>
+<p>Find me in app/views/appointments/index.html.erb</p>
+
+<% @appointments.each do |appointment| %>
+  <p>
+    <%= link_to(appointment.appt_slot, appointment_path(appointment.id)) %> - <%= appointment.doctor.name %> - <%= appointment.patient.name %>
+    <%= link_to("Edit", edit_appointment_url(appointment.id)) %> -
+    <%= link_to("Delete", appointment_url(appointment.id), :method => :delete) %>
+  </p>
+<% end %>
+
+<p>
+<%= link_to "New Appt", new_appointment_url %>
+</p>
